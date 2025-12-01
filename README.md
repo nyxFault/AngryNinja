@@ -27,9 +27,9 @@ A lightweight angr-based automation script for solving simple crackmes that take
 git clone https://github.com/nyxFault/AngryNinja.git
 ```
 
-Copy nyxfault_AngryNinja.py to your Binary Ninja plugins directory:
-- Windows: %APPDATA%\Binary Ninja\plugins\
-- Linux: ~/.binaryninja/plugins/
+Copy `nyxfault_AngryNinja.py` to your Binary Ninja plugins directory:
+- Windows: `%APPDATA%\Binary Ninja\plugins\`
+- Linux: `~/.binaryninja/plugins/`
 
 ### Usage
 
