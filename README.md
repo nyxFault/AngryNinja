@@ -5,7 +5,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/nyxFault/AngryNinja?style=for-the-badge&color=yellow)](https://github.com/nyxFault/AngryNinja/stargazers)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge)]()
 
-# AngryNinja - Binary Ninja Plugin 
+# AngryNinja - Binary Ninja Plugin
 A lightweight angr-based automation script for solving simple crackmes that take input via `argv[1]` or `stdin` with no complex transformations.
 
 ## Installation
@@ -27,14 +27,14 @@ A lightweight angr-based automation script for solving simple crackmes that take
 git clone https://github.com/nyxFault/AngryNinja.git
 ```
 
-Copy AngryNinja.py to your Binary Ninja plugins directory:
+Copy nyxfault_AngryNinja.py to your Binary Ninja plugins directory:
 - Windows: %APPDATA%\Binary Ninja\plugins\
 - Linux: ~/.binaryninja/plugins/
 
 ### Usage
 
 1. Load Binary → Open your crackme in Binary Ninja
-2. Run Plugin → Plugins → nyxFault-Binja → AngryNinja
+2. Run **Plugins** → **nyxFault-AngryNinja** or Ctrl + P → Search for **nyxFault-AngryNinja**
 3. Configure → 
   - Set **Target String** and **Avoid String**
   - Set **Input Size** 
