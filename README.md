@@ -41,3 +41,44 @@ Copy `nyxfault_AngryNinja.py` to your Binary Ninja plugins directory:
   - Select input type (**argv** or **stdin**)
   - Set **Character Constraints**
 6. Execute → Watch angr find the password!
+
+## Demonstration
+
+### 1. Solving `argv[1]` Crackme (`crackme_argv`)
+
+**Challenge:** Download from [crackme-challs repository](https://github.com/nyxFault/crackme-challs)  
+**Binary Type:** Command-line argument input  
+**Success Message:** `Congratulations! Cracked! Flag ...`  
+**Failure Message:** `Try Again! Invalid password.`
+
+**Steps in AngryNinja:**
+1. Load `crackme_argv` in Binary Ninja
+2. Navigate to: `Plugins → AngryNinja → Solve argv[1] Crackme`
+3. Configure:
+   - **Target String:** `Congratulations` (success indicator)
+   - **Avoid String:** `Invalid` (failure indicator)
+4. Click **Solve** and wait for results
+
+**Result:** AngryNinja automatically finds the correct password that triggers the success message!
+
+![crackme_argv Demonstration](https://github.com/nyxFault/Images/blob/main/crackme_argv.png?raw=true)
+
+
+### 2. Solving `stdin` Crackme (`crackme_stdin`)
+
+**Challenge:** From the same [crackme-challs repository](https://github.com/nyxFault/crackme-challs)  
+**Binary Type:** Standard input (keyboard/piped input)  
+**Success Message:** `Access granted! You entered the ...`  
+**Failure Message:** `Access denied! Incorrect ...`
+
+**Steps in AngryNinja:**
+1. Load `crackme_stdin` in Binary Ninja
+2. Navigate to: `Plugins → AngryNinja → Solve stdin Crackme`
+3. Configure:
+   - **Target String:** `granted` (success indicator)
+   - **Avoid String:** `denied` (failure indicator)
+4. Click **Solve** and let angr work its magic
+
+**Result:** The plugin discovers the exact input needed to bypass the password check!
+
+![crackme_stdin Demonstration](https://github.com/nyxFault/Images/blob/main/crackme_stdin.png?raw=true)
